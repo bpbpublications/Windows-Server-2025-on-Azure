@@ -1,0 +1,2 @@
+# Response of 1 indicates HVCI is enabled, and 0 means it is disabled
+Get-CimInstance -ClassName Win32_DeviceGuard -Namespace root\Microsoft\Windows\DeviceGuard | Select-Object -ExpandProperty CodeIntegrityPolicyEnforcementStatus

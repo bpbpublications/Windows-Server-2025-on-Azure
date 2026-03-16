@@ -1,0 +1,6 @@
+ContainerLogV2
+| where TimeGenerated > ago(1h)
+| where ContainerName startswith "winserver2025"
+| where LogMessage has_any ("error", "fail", "warning")
+| project TimeGenerated, ContainerName, LogMessage, Image, LogSource, Computer
+| order by TimeGenerated desc
