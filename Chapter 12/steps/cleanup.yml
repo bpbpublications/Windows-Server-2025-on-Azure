@@ -1,7 +1,0 @@
-# Cleanup step library
-description: "Test cleanup actions"
-steps:
-  - "Clear browser cache if needed"
-  - "Reset test data if required"
-  - "Log out user if logged in"
-  - "Close any open dialogs or modals"

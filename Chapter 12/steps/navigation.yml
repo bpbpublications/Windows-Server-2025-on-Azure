@@ -1,8 +1,0 @@
-# Navigation step library
-description: "Common navigation actions"
-parameters:
-  - BASE_URL
-steps:
-  - "Navigate to {{BASE_URL}}"
-  - "Wait for page to load completely"
-  - "Verify page title contains expected text"

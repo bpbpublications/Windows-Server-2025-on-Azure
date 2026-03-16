@@ -1,4 +1,0 @@
-2026-03-15 16:59:22 [error]: Navigation failed for URL: / - Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
-Call log:
-[2m  - navigating to "/", waiting until "load"[22m
-

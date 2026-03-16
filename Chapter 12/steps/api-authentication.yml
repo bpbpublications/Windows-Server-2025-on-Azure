@@ -1,8 +1,0 @@
-description: "API operations for user authentication - login and registration"
-parameters:
-  - API_BASE_URL
-steps:
-  - "Add header 'x-api-key: reqres-free-v1' to all requests in the session"
-  - "Make POST request to {{API_BASE_URL}}/api/register with JSON body: {\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\"}"
-  - "Verify response status code is 200, and response contains 'id' and 'token' fields"
-  - "Store token from response for subsequent requests"
