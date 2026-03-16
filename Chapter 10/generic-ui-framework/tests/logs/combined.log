@@ -1,0 +1,7 @@
+2026-03-15 16:59:22 [info]: Login test setup: LoginPage initialized.
+2026-03-15 16:59:22 [error]: Navigation failed for URL: / - Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+[2m  - navigating to "/", waiting until "load"[22m
+
+2026-03-15 16:59:22 [info]: Screenshot taken: navigation-error-1773547162247
+2026-03-15 16:59:22 [info]: Login test teardown: Browser and Page closed.

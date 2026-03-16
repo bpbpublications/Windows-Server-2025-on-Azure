@@ -1,0 +1,25 @@
+{
+  "theme": "GitHub",
+  "selectedAuthType": "oauth-personal", //use other based on how you autheticated gemini
+  "mcpServers": {
+    "playwright-mcp": {
+      "command": "npx",
+      "args": [
+        "@democratize-quality/playwright-mcp",
+        "--user-data-dir",
+        "gemini-playwright",
+        "--save-trace",
+        "--output-dir",
+        "test-artifacts",
+        "--caps",
+        "api_session_report,api_session_status,api_request"
+      ]
+    },
+    "artillery-mcp": {
+      "command": "npx",
+      "args": [ "@democratize-quality/artillery-performance-mcp-server",
+      "/"]
+    }
+  },
+  "autoAccept": true //This one is for allowing gemini to accept all actions if nor required make it false
+}

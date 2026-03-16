@@ -1,0 +1,11 @@
+description: "API operations for creating and managing new users"
+parameters:
+  - API_BASE_URL
+steps:
+  - "Add header 'x-api-key: reqres-free-v1' to all requests in the session"
+  - "Make POST request to {{API_BASE_URL}}/api/users with JSON body: {\"name\": \"morpheus\", \"job\": \"leader\"}"
+  - "Verify response status code is 201"
+  - "Verify response contains 'id' field"
+  - "Verify response contains 'createdAt' timestamp"
+  - "Verify response 'name' field equals 'morpheus'"
+  - "Verify response 'job' field equals 'leader'"

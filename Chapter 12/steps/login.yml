@@ -1,0 +1,15 @@
+# Login step library with session persistence
+description: "User authentication with session management"
+parameters:
+  - BASE_URL
+  - TEST_USERNAME
+  - TEST_PASSWORD
+steps:
+  - "Navigate to {{BASE_URL}}"
+  - "Check if user is already logged in by looking for user menu or dashboard"
+  - "If not logged in, click login button or link"
+  - "Fill username field with {{TEST_USERNAME}}"
+  - "Fill password field with {{TEST_PASSWORD}}"
+  - "Click login submit button"
+  - "Wait for login success indicator"
+  - "Verify user is logged in successfully"

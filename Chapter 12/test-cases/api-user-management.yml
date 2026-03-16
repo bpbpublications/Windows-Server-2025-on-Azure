@@ -1,0 +1,17 @@
+name: "API User Management Test"
+description: "Test GET users endpoint with pagination and user creation via POST"
+tags:
+  - api
+  - user-management
+  - reqres
+  - critical
+type: "api"
+environment_variables:
+  - API_BASE_URL
+steps:
+  - include: "api-user-management"
+  - include: "api-user-creation"
+  - "Make GET request to {{API_BASE_URL}}/api/users/2 to fetch single user"
+  - "Verify response status code is 200"
+  - "Verify response contains user data with id=2"
+  - "Verify response contains 'support' object with url and text fields"

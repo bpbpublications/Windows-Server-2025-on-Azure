@@ -1,0 +1,17 @@
+name: "User Login Test"
+description: "Test user authentication functionality"
+tags:
+  - smoke
+  - login
+  - authentication
+  - critical
+environment_variables:
+  - BASE_URL
+  - TEST_USERNAME
+  - TEST_PASSWORD
+steps:
+  - include: "navigation"
+  - include: "login"
+  - "Verify user dashboard is displayed"
+  - "Verify user name appears in header"
+  - include: "cleanup"

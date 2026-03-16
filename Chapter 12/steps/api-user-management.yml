@@ -1,0 +1,9 @@
+description: "API operations for user management - GET, POST, PUT, DELETE users"
+parameters:
+  - API_BASE_URL
+steps:
+  - "Add header 'x-api-key: reqres-free-v1' to all requests in the session"
+  - "Make GET request to {{API_BASE_URL}}/api/users?page=2 to fetch users list"
+  - "Verify response status code is 200"
+  - "Verify response contains 'data' array with user objects"
+  - "Verify response contains 'page', 'per_page', 'total' pagination fields"

@@ -1,0 +1,26 @@
+{
+  "name": "generic-ui-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:iphone14": "npx playwright test --project=iphone14",
+    "test:fullparallel": "npx playwright test --workers=$(node -e \"console.log(require('os').cpus().length)\")"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.10",
+    "dotenv": "^17.2.1"
+  },
+  "dependencies": {
+    "@reportportal/agent-js-playwright": "^5.2.1",
+    "winston": "^3.17.0"
+  }
+}

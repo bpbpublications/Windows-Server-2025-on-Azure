@@ -1,0 +1,11 @@
+name: "API Smoke Test Suite"
+description: "Quick API tests for reqres.in endpoints covering user management and authentication"
+tags:
+  - api
+  - smoke
+  - reqres
+  - fast
+environment: "api"
+test-cases:
+  - "test-cases/api-user-management.yml"
+  - "test-cases/api-authentication-flow.yml"

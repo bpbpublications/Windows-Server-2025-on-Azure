@@ -1,0 +1,20 @@
+name: "API Authentication Flow Test"
+description: "Test user registration, login, and error scenarios with reqres.in API"
+tags:
+  - api
+  - authentication
+  - error-handling
+  - reqres
+type: "api"
+environment_variables:
+  - API_BASE_URL
+steps:
+  - include: "api-authentication"
+  - "Make POST request to {{API_BASE_URL}}/api/login with JSON body: {\"email\": \"eve.holt@reqres.in\", \"password\": \"cityslicka\"} and header as token from previous step"
+  - "Verify response status code is 200"
+  - "Verify response contains 'token' field"
+  - "Make POST request to {{API_BASE_URL}}/api/login with JSON body: {\"email\": \"peter@klaven\"}"
+  - "Verify response status code is 400"
+  - "Verify response contains error message about missing password"
+  - "Make GET request to {{API_BASE_URL}}/api/users/23 to test non-existent user"
+  - "Verify response status code is 404"
