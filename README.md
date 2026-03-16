@@ -1,2 +1,2 @@
-# Scalable Test Automation with Playwright
-Scalable Test Automation with Playwright, by BPB Publications
+# Windows Server 2025 on Azure
+Windows Server 2025 on Azure, by BPB Publications
