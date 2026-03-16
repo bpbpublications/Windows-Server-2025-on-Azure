@@ -1,0 +1,1 @@
+New-SmbServerCertificateMapping -Name <server FQDN> -ThumbPrint $serverCert.Thumbprint -Storename My

@@ -1,0 +1,33 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  azureSubscription: 'My-Azure-Connection'  # Service connection name
+  resourceGroupName: 'myResourceGroup'
+  location: 'eastus'
+  templateFile: 'templates/template.json'
+  parametersFile: 'templates/parameters.json'
+
+stages:
+- stage: DeployInfrastructure
+  displayName: 'Deploy ARM Template'
+  jobs:
+  - job: ARMDeployment
+    displayName: 'Deploy ARM resources'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: $(azureSubscription)
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az group create --name $(resourceGroupName) --location $(location)
+          az deployment group create \
+            --resource-group $(resourceGroupName) \
+            --template-file $(templateFile) \
+            --parameters @$(parametersFile)
+        displayName: 'Deploy ARM template'
